@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+<form action="{{ url_for('create_tarefa') }}" method="post">
+    <input type="hidden" name="categoria" value="{{ categoria }}">
+
+    <label for="titulo">Título da Tarefa:</label> 
+    <input type="text" id="titulo" name="nome" placeholder="Digite o título" required>
+
+    <label for="conteudo">Conteúdo da Tarefa:</label> 
+    <textarea id="conteudo" name="conteudo" placeholder="Digite o conteúdo" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
